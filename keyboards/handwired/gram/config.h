@@ -20,8 +20,12 @@
 #define MATRIX_COL_PINS { F7, B1 }
 #define UNUSED_PINS
 
+/* rotary encoder pins */
 #define ENCODERS_PAD_A { B3 }
 #define ENCODERS_PAD_B { B2 }
+
+/* rgb pins */
+#define RGB_DI_PIN D4
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
@@ -52,7 +56,7 @@
 
 #ifdef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 0
+#define RGBLED_NUM 5
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8

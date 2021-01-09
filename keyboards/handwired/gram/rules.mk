@@ -2,6 +2,7 @@
 MCU = atmega32u4
 BOOTLOADER = caterina
 ENCODER_ENABLE = yes
+RGBLIGHT_ENABLE = yes
 # Processor frequency.
 #     This will define a symbol, F_CPU, in all source code files equal to the
 #     processor frequency in Hz. You can then use this symbol in your source code to
