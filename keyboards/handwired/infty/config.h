@@ -63,6 +63,10 @@
 //#define BACKLIGHT_LEVELS 3
 //#define BACKLIGHT_BREATHING
 
+#define ENCODERS_PAD_A { F0 }
+#define ENCODERS_PAD_B { F1 }
+#define ENCODER_DIRECTION_FLIP
+
 #define RGB_DI_PIN F4
 #ifdef RGB_DI_PIN
     #define RGBLED_NUM 24
