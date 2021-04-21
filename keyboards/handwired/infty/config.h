@@ -39,15 +39,15 @@
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
-#define MATRIX_ROW_PINS { B0, B1, B2, B3, D0 }
-#define MATRIX_COL_PINS { D1, D2, D3, C6, C7, D5, D4, D6, D7, B4, B5, B6, F7, F6, F5 }
+#define MATRIX_ROW_PINS { B12, B13, B14, B15, A11 }
+#define MATRIX_COL_PINS { A12, A15, B3, B4, B5, B6, B7, B8, B9, B11, B10, B1, B0, A7, A6 }
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
-#define BACKLIGHT_PIN B7
+//#define BACKLIGHT_PIN A9
 // #define BACKLIGHT_BREATHING
-#define BACKLIGHT_LEVELS 3
+//#define BACKLIGHT_LEVELS 3
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
  */
@@ -59,15 +59,11 @@
 //#define LED_COMPOSE_PIN B3
 //#define LED_KANA_PIN B4
 
-//#define BACKLIGHT_PIN B7
-//#define BACKLIGHT_LEVELS 3
-//#define BACKLIGHT_BREATHING
-
-#define ENCODERS_PAD_A { F0 }
-#define ENCODERS_PAD_B { F1 }
+#define ENCODERS_PAD_A { A4 }
+#define ENCODERS_PAD_B { A3 }
 #define ENCODER_DIRECTION_FLIP
 
-#define RGB_DI_PIN F4
+#define RGB_DI_PIN A1
 #ifdef RGB_DI_PIN
     #define RGBLED_NUM 24
     #define RGBLIGHT_HUE_STEP 8
@@ -149,3 +145,4 @@
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
+//st-flash write handwired_infty_default.bin 0x08000000
