@@ -23,7 +23,7 @@
 #define PRODUCT_ID 0x002B
 #define DEVICE_VER 0x0001
 #define MANUFACTURER Daniel Roehrig
-#define PRODUCT infty
+#define PRODUCT Infty
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -31,30 +31,20 @@
 
 
 #define MATRIX_ROW_PINS { B12, B13, B14, B15, A15 }
-#define MATRIX_COL_PINS { B3, B4, B5, B6, B7, B8, B9, B10, B2, B1, B0, A7, A6 }
+#define MATRIX_COL_PINS { B3, B4, B5, B6, B7, B8, B9, B10, A5, B1, B0, A7, A6, A4, A3 }
 #define UNUSED_PINS
-
-/* COL2ROW, ROW2COL */
-#define DIODE_DIRECTION COL2ROW
-
-#define BACKLIGHT_PIN A2
-// #define BACKLIGHT_BREATHING
-#define BACKLIGHT_LEVELS 3
-
-
-//#define LED_NUM_LOCK_PIN B0
-//#define LED_CAPS_LOCK_PIN B1
+  
 //#define LED_SCROLL_LOCK_PIN B2
 //#define LED_COMPOSE_PIN B3
 //#define LED_KANA_PIN B4
 
-#define ENCODERS_PAD_A { A5 }
-#define ENCODERS_PAD_B { A4 }
-#define ENCODER_DIRECTION_FLIP
+#define ENCODERS_PAD_A { A2 }
+#define ENCODERS_PAD_B { A1 }
+//#define ENCODER_DIRECTION_FLIP
 
-#define RGB_DI_PIN A3
+#define RGB_DI_PIN A0
 #ifdef RGB_DI_PIN
-    #define RGBLED_NUM 24
+    #define RGBLED_NUM 30
     #define RGBLIGHT_HUE_STEP 8
     #define RGBLIGHT_SAT_STEP 8
     #define RGBLIGHT_VAL_STEP 8
