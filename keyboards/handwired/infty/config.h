@@ -30,16 +30,16 @@
 #define MATRIX_COLS 15
 
 
-#define MATRIX_ROW_PINS { B12, B13, B14, B15, A11 }
-#define MATRIX_COL_PINS { A12, A15, B3, B4, B5, B6, B7, B8, B9, B11, B10, B1, B0, A7, A6 }
+#define MATRIX_ROW_PINS { B12, B13, B14, B15, A15 }
+#define MATRIX_COL_PINS { B3, B4, B5, B6, B7, B8, B9, B10, B2, B1, B0, A7, A6 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
-//#define BACKLIGHT_PIN A9
+#define BACKLIGHT_PIN A2
 // #define BACKLIGHT_BREATHING
-//#define BACKLIGHT_LEVELS 3
+#define BACKLIGHT_LEVELS 3
 
 
 //#define LED_NUM_LOCK_PIN B0
@@ -48,11 +48,11 @@
 //#define LED_COMPOSE_PIN B3
 //#define LED_KANA_PIN B4
 
-#define ENCODERS_PAD_A { A4 }
-#define ENCODERS_PAD_B { A3 }
+#define ENCODERS_PAD_A { A5 }
+#define ENCODERS_PAD_B { A4 }
 #define ENCODER_DIRECTION_FLIP
 
-#define RGB_DI_PIN A1
+#define RGB_DI_PIN A3
 #ifdef RGB_DI_PIN
     #define RGBLED_NUM 24
     #define RGBLIGHT_HUE_STEP 8
