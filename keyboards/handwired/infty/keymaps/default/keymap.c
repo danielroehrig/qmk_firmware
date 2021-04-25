@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           	KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMMA, KC_DOT, KC_SLSH, KC_RSFT, KC_UP,
         	KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, MO(1), KC_SPC, KC_RALT, KC_LEFT, KC_DOWN, KC_RGHT),
     [_FN] = LAYOUT(
-               	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_MODE_GRADIENT, RGB_MODE_BREATHE, RGB_MODE_PLAIN, RGB_TOG, _______,
+               	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_MODE_GRADIENT, RGB_MODE_BREATHE, RGB_MODE_PLAIN, RGB_TOG, KC_DEL,
                	_______, KC_MPLY, KC_MPRV, KC_MNXT, _______, _______, _______, _______, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MODE_FORWARD, _______, _______, _______,
 		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -65,9 +65,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 void encoder_update_user(uint8_t index, bool clockwise) {
-    if (clockwise) {
-        tap_code(KC_PGDN);
-    } else {
-        tap_code(KC_PGUP);
-    }
+	if (clockwise) {
+		if(IS_LAYER_ON(_BASE)){
+        		tap_code(KC_PGUP);
+		}else if(IS_LAYER_ON(_FN)){
+			tap_code(KC__VOLUP);
+		}
+	} else {
+		if(IS_LAYER_ON(_BASE)){
+        		tap_code(KC_PGDN);
+		}else if(IS_LAYER_ON(_FN)){
+			tap_code(KC__VOLDOWN);
+		}
+	}
 }
+
