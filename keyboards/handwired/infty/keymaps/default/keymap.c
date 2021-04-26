@@ -35,9 +35,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           	KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMMA, KC_DOT, KC_SLSH, KC_RSFT, KC_UP,
         	KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, MO(1), KC_SPC, KC_RALT, KC_LEFT, KC_DOWN, KC_RGHT),
     [_FN] = LAYOUT(
-               	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_MODE_GRADIENT, RGB_MODE_BREATHE, RGB_MODE_PLAIN, RGB_TOG, KC_DEL,
-               	_______, KC_MPLY, KC_MPRV, KC_MNXT, _______, _______, _______, _______, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MODE_FORWARD, _______, _______, _______,
-		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+               	_______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, _______, KC_DEL,
+               	_______, _______, KC_MPLY, KC_MPRV, KC_MNXT, _______, _______, RGB_TOG, RGB_MODE_PLAIN, RGB_MODE_GRADIENT, RGB_MODE_BREATHE, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MODE_FORWARD,
+		_______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, _______, _______, _______,
 		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 		_______, _______, _______, _______, _______, _______, RESET, _______, _______, _______),  
 };
